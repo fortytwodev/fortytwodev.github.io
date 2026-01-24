@@ -1,0 +1,231 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.data.info.title }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .terminal {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .terminal-header {
+            color: #58a6ff;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+        }
+
+        .prompt {
+            color: #7ee787;
+        }
+
+        h1 {
+            color: #58a6ff;
+            font-size: 28px;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #f85149;
+            font-size: 20px;
+            font-family: 'Courier New', monospace;
+            margin: 25px 0 15px 0;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            background-color: #21262d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b949e;
+            flex-shrink: 0;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin: 15px 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 5px;
+        }
+
+        .contact-info a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .section-content {
+            margin-left: 20px;
+        }
+
+        .job, .education, .project {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 2px solid #30363d;
+        }
+
+        .job-title, .degree, .project-name {
+            color: #f0883e;
+            font-weight: 600;
+            font-size: 17px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .company, .school {
+            color: #8b949e;
+            font-size: 15px;
+            margin-top: 3px;
+        }
+
+        .date {
+            color: #7ee787;
+            font-size: 14px;
+        }
+
+        .description {
+            margin-top: 8px;
+            color: #c9d1d9;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .tech-stack {
+            color: #a371f7;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-section {
+                flex-direction: column;
+            }
+
+            .profile-image {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="terminal">
+        <div class="terminal-header"><span class="prompt">$</span> cat portfolio.txt</div>
+
+        <div class="profile-section">
+            <div class="profile-image">
+                [Photo]
+            </div>
+            <div class="profile-info">
+                <h1>{{ site.data.info.full_name }}</h1>
+                <div class="subtitle">Backend Engineer</div>
+
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:{{ site.data.info.email }}">{{ site.data.info.email }}</a></p>
+                    <p>GitHub: <a href="https://{{ site.data.info.github }}" target="_blank">{{ site.data.info.github }}</a></p>
+                    <p>LinkedIn: <a href="https://{{site.data.info.linkedin}}" target="_blank">{{ site.data.info.linkedin }}</a></p>
+                    <p>Location: Nukus, Uzbekistan</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Work Experience</h2>
+        <div class="section-content">
+            <div class="job">
+                <div class="job-title">Backend Developer</div>
+                <div class="company">Express24 | <span class="date">Nov 2021 - Nov 2024</span></div>
+                <div class="description">
+                    <ul>
+                        <li>Developed, enhanced, and maintained the Merchant service for Express24 restaurant partners.</li>
+                        <li>Improved usability and operational efficiency for managers and cashiers in order management workflows.</li>
+                        <li>Streamlined order processing to increase speed and reliability of daily operations.</li>
+                        <li>Integrated third-party services to enable faster and more efficient handling of orders and menus.</li>
+                    </ul>
+                    <div class="tech-stack">Technologies: PHP, Python, FastAPI, MySQL, MongoDB</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Education</h2>
+        <div class="section-content">
+            <div class="education">
+                <div class="degree">Bachelor's degree in Software engineering</div>
+                <div class="school">Tashkent University Of Information Technologies Named After Muhammad Al-khwarizmi | <span class="date">2016 - 2020</span></div>
+            </div>
+        </div>
+
+        <h2>Projects</h2>
+        <div class="section-content">
+            <div class="project">
+                <div class="project-name">5x5 LAN</div>
+                <div class="description">
+                    <p>Plugin for CS2 Dedicated server.</p>
+                    <div class="tech-stack">Technologies: C#, <a href="https://docs.cssharp.dev/">CSSharp</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
